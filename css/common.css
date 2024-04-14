@@ -12,6 +12,7 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -27,4 +28,14 @@ img {
   gap: 24px;
   flex-wrap: wrap;
   row-gap: 48px;
+}
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
 }
