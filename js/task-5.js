@@ -11,6 +11,7 @@ const nameColor = document.querySelector('.color');
 clickMe.addEventListener('click', moveColor);
 
 function moveColor() {
-  backgroundBox.style.backgroundColor = getRandomHexColor();
-  nameColor.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  backgroundBox.style.backgroundColor = randomColor;
+  nameColor.textContent = randomColor;
 }
