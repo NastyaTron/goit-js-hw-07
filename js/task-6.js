@@ -30,9 +30,8 @@ function destroyBoxes() {
 
 btnElCreate.addEventListener('click', () => {
   const amount = Number(inputEl.value);
-  if (amount >= 1 && amount <= 100) {
-    createBoxes(amount);
-    input.value = '';
+  if (amount < 1 || amount > 100) {
+    return;
   }
 });
 
