@@ -25,17 +25,15 @@ const images = [
   },
 ];
 
-function createGallary(imageArray) {
-  const itemEl = document.querySelector('.gallery');
-  itemEl.classList.add('gallery-list');
+const itemEl = document.querySelector('.gallery');
+itemEl.classList.add('gallery-list');
 
-  imageArray.forEach(image => {
-    const navItemEl = document.createElement('li');
-    const imagesEl = document.createElement('img');
-    imagesEl.setAttribute('src', image.url);
-    imagesEl.setAttribute('alt', image.alt);
-    navItemEl.append(imagesEl);
-    itemEl.append(navItemEl);
-  });
-}
-createGallary(images);
+const imagesEl = images.map(image => {
+  const navItemEl = document.createElement('li');
+  const imgEl = document.createElement('img');
+  imgEl.setAttribute('src', image.url);
+  imgEl.setAttribute('alt', image.alt);
+  navItemEl.append(imgEl);
+  return navItemEl;
+});
+itemEl.append(...imagesEl);
